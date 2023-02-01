@@ -225,7 +225,7 @@ int cubo(int numero){
     numero = numero / 10;
     cubica = cubica + pow(resultado, 3); 
   }
- return cubica;
+  return cubica;
   
 }
 
@@ -254,9 +254,9 @@ int inverso (int numero){
   string letra;
   archivo.open("documento.txt");
   while(numero / 10 != 0 || numero % 10 != 0){
-     resultado = numero % 10;
-     numero = numero / 10;
-     archivo<<resultado;
+    resultado = numero % 10;
+    numero = numero / 10;
+    archivo<<resultado;
   }
   archivo<<endl<<"x";
   archivo.close();
@@ -313,7 +313,7 @@ while(salida != '0'){
   }
   cout<<"desea salir del ejercicio 5"<<endl<<"presione 0 para salir---presione otro numero para continuar"<<endl;
   cin>>salida;
- }
+  }
 }
 
 //Funciones del ejercicio 6
