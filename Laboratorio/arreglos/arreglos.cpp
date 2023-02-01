@@ -68,11 +68,12 @@ void imprimir(const int lista[TAM], int contador){
     }
 }
 int buscar(const int lista[TAM], int contador, bool &encontrado){
+    encontrado = false;
     int buscado, posicion = 0;
     cout  << "Ingrese el numero a buscar: ";
     cin >> buscado;
     int i=0;
-    while(/*!encontrado &&*/ i < contador){ //Despues de una interaccion encontrado = true y en el while !encontrado = false y por tanto no ingresa 
+    while(!encontrado && i < contador){ //Despues de una interaccion encontrado = true y en el while !encontrado = false y por tanto no ingresa 
         //cout << posicion <<" "<< lista[i]<<" "<< buscado <<" "<< encontrado << endl;
         if (lista[i]== buscado){
             posicion = i;
