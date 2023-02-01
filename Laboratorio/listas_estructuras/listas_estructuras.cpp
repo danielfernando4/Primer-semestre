@@ -203,15 +203,15 @@ int mayorNota(const tLista lista){
 }
 
 void mostrarEstudiante(tEstudiante estudiante){
-    cout << setw(45) << right << nombreCompleto(estudiante);
-    cout << setw (12) << right << estudiante.nif << " ";
+    cout << setw(40) << left << nombreCompleto(estudiante);
+    cout << setw (12) << left << estudiante.nif << " ";
     cout << setw(2) << estudiante.edad << " años ";
     cout << fixed << setprecision(1) << estudiante.nota;
 }
 
 void listado(const tLista lista, double media, int mayor){
     for (int i = 0; i < lista.contador; i++){
-        cout << setw(3) << i << ": ";
+        cout << setw(3) << left << i + 1  << ": ";
         mostrarEstudiante(lista.elementos[i]);
         if (i == mayor){
             cout << " <<< Mayor nota!";
