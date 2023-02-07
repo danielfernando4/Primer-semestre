@@ -3,7 +3,7 @@
 using namespace std;
 #include <fstream>
 #include <iomanip>
-
+#include <cstdlib>
 const int MAX = 100;
 typedef struct{
     string nombre;
@@ -36,8 +36,8 @@ int main(){
     tEstudiante estudiante;
     bool exito;
     int op, pos;
-    
     cargar(lista, exito);
+    
     if (!exito){
         cout << "No se ha podido cargar la lista" << endl;
     } else{
@@ -78,8 +78,8 @@ int main(){
                 break;
             }
         }while(op != 0);
-        guardar(lista);
     }
+        guardar(lista);
     return 0;
 }
 
@@ -96,6 +96,7 @@ int menu(){
     }while((op<0) || (op>4));
     return op;
 }
+
 void cargar(tLista &lista, bool &ok){
     tEstudiante estudiante; //Variable auxiliar para leer
     ifstream archivo;
